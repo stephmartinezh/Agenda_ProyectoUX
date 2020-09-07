@@ -56,7 +56,7 @@
 }
 
 .boton-estilo{
-    position: fixed;
+    position: absolute;
     text-decoration:none;
     font-weight:600;
     font-size:20px;
@@ -66,4 +66,47 @@
     background: #2BE253;
     border-radius: 150px;
     color: white;
+}
+
+.imagen-computadora{
+    margin-top: 102px;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.imagen-primera{
+    position: absolute;
+    left: 25%;
+	height:auto;
+    margin-left:auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    float: left;
+}
+
+.imagen-segunda{
+    position: absolute;
+    right: 25%;
+	height:auto;
+    margin-left:auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    float: right;
+}
+
+.imagen-notas{
+    position: absolute;
+    left: 27.5%;
+	height:auto;
+    margin-left:auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    float: left;
 }

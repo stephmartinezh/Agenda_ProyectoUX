@@ -1,6 +1,5 @@
 import React from 'react'
 import './paginaPrincipal.css'
-import {Button} from 'reactstrap'
 
 function Principal() {
     return( 
@@ -22,10 +21,41 @@ function Principal() {
             <img class="imagen" src="img_pantallaPrincipal.png" alt="Imagen de inicio"></img>
             <h1><center>¿Necesitas organizar tus eventos y contactos?</center></h1>
             <br></br>
+
             <p><font size="5"><center>Con esta agenda virtual ahora puedes hacerlo</center></font></p>
             <p><font size="5"><center>en menos tiempo y sin mucho esfuerzo.</center></font></p>
             <br></br>
+
             <button type="button" class="boton-estilo">Crea tu agenda virtual</button>
+            <br></br><br></br><br></br>
+
+            <center><img class="imagen-computadora" src="principal_computadora.png" alt="Imagen de la página web"></img></center>
+            <br></br><br></br><br></br>
+
+            <h1><center>Funciones de la agenda virtual</center></h1>
+            <br></br><br></br><br></br>
+
+                
+            <div className="imagen-primera">
+                <img src="calendario.png" alt="Calendario organizador"></img>
+                <p><font size="5">Calendario organizador</font></p>
+            </div>
+            <div className="imagen-segunda">
+                <img src="actividades.png" alt="Programador de actividades"></img>
+
+                <p><font size="5">Programador de actividades</font></p>
+            </div>
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+            <div className="imagen-notas">
+                <img src="notas.png" alt="Calendario organizador"></img>
+                <p><font size="5">Manejo de notas</font></p>
+            </div>
+            <div className="imagen-segunda">
+                <img src="contactos.png" alt="Almacenador de contactos"></img>
+
+                <p><font size="5">Almacenador de contactos</font></p>
+            </div>
         </div>
     );
 }
