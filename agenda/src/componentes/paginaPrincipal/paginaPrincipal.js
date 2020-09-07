@@ -21,15 +21,17 @@ function Principal() {
             <img class="imagen" src="img_pantallaPrincipal.png" alt="Imagen de inicio"></img>
             <h1><center>¿Necesitas organizar tus eventos y contactos?</center></h1>
             <br></br>
-
             <p><font size="5"><center>Con esta agenda virtual ahora puedes hacerlo</center></font></p>
             <p><font size="5"><center>en menos tiempo y sin mucho esfuerzo.</center></font></p>
             <br></br>
 
             <button type="button" class="boton-estilo">Crea tu agenda virtual</button>
+
             <br></br><br></br><br></br>
 
-            <center><img class="imagen-computadora" src="principal_computadora.png" alt="Imagen de la página web"></img></center>
+            <div className="rectangulo-primeraParte">
+                <center><img class="imagen-computadora" src="principal_computadora.png" alt="Imagen de la página web"></img></center>
+            </div>
             <br></br><br></br><br></br>
 
             <h1><center>Funciones de la agenda virtual</center></h1>

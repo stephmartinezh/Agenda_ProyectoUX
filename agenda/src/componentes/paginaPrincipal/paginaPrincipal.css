@@ -70,6 +70,8 @@
 
 .imagen-computadora{
     margin-top: 102px;
+    max-width: 100%;
+    max-width: 100%;
     height: auto;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -109,4 +111,13 @@
     background-size: 100% 100%;
     text-align: center;
     float: left;
+}
+
+.rectangulo-primeraParte{
+    width: 100%;
+    max-width: 100%;
+    height: 620px;
+    left: 0px;
+
+    background: #c7c7c75b;
 }
