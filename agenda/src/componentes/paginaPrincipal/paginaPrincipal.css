@@ -32,13 +32,13 @@
 }
 
 .paginaPrincipal-navigation-items li{
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .paginaPrincipal-navigation-items a{
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .paginaPrincipal-navigation-items a:hover,
@@ -53,4 +53,17 @@
     height: auto;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.boton-estilo{
+    position: fixed;
+    text-decoration:none;
+    font-weight:600;
+    font-size:20px;
+    width: 250px;
+    height: 50px;
+    left:40%;
+    background: #2BE253;
+    border-radius: 150px;
+    color: white;
 }

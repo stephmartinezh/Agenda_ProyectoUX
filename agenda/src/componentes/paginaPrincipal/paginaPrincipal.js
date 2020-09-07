@@ -1,5 +1,6 @@
 import React from 'react'
 import './paginaPrincipal.css'
+import {Button} from 'reactstrap'
 
 function Principal() {
     return( 
@@ -19,6 +20,12 @@ function Principal() {
                 </nav>
             </header>
             <img class="imagen" src="img_pantallaPrincipal.png" alt="Imagen de inicio"></img>
+            <h1><center>¿Necesitas organizar tus eventos y contactos?</center></h1>
+            <br></br>
+            <p><font size="5"><center>Con esta agenda virtual ahora puedes hacerlo</center></font></p>
+            <p><font size="5"><center>en menos tiempo y sin mucho esfuerzo.</center></font></p>
+            <br></br>
+            <button type="button" class="boton-estilo">Crea tu agenda virtual</button>
         </div>
     );
 }
