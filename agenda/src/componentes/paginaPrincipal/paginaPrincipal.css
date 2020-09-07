@@ -1,0 +1,46 @@
+.paginaPrincipal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px; 
+    background: #45D364;
+}
+
+.paginaPrincipal-barra{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.paginaPrincipal-logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.espacio{
+    flex: 1;
+}
+
+.paginaPrincipal-navigation-items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.paginaPrincipal-navigation-items li{
+    padding: 0 0.5rem;
+}
+
+.paginaPrincipal-navigation-items a{
+    color: white;
+    text-decoration: none;
+}
+
+.paginaPrincipal-navigation-items a:hover,
+.paginaPrincipal-navigation-items a:active{
+    color: rgb(255, 145, 0);
+}
