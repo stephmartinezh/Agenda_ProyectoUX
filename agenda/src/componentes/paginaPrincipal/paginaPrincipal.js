@@ -12,8 +12,8 @@ function Principal() {
                     <div className="espacio"></div>
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
-                            <li><a href="/">Log in</a></li>
-                            <li><a href="/">Sign in</a></li>
+                            <li><button type="button" className="boton-barra"><a href="/">Log in</a></button></li>
+                            <li><button type="button" className="boton-barra"><a href="/">Sign in</a></button></li>
                         </ul>
                     </div>
                 </nav>
@@ -25,7 +25,9 @@ function Principal() {
             <p><font size="5"><center>en menos tiempo y sin mucho esfuerzo.</center></font></p>
             <br></br>
 
-            <button type="button" class="boton-estilo">Crea tu agenda virtual</button>
+            <div className="center">
+                <button type="button" class="boton-estilo">Crea tu agenda virtual</button>
+            </div>
 
             <br></br><br></br><br></br>
 
@@ -42,9 +44,9 @@ function Principal() {
                 <img src="calendario.png" alt="Calendario organizador"></img>
                 <p><font size="5">Calendario organizador</font></p>
             </div>
+
             <div className="imagen-segunda">
                 <img src="actividades.png" alt="Programador de actividades"></img>
-
                 <p><font size="5">Programador de actividades</font></p>
             </div>
             <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
@@ -53,9 +55,9 @@ function Principal() {
                 <img src="notas.png" alt="Calendario organizador"></img>
                 <p><font size="5">Manejo de notas</font></p>
             </div>
+
             <div className="imagen-segunda">
                 <img src="contactos.png" alt="Almacenador de contactos"></img>
-
                 <p><font size="5">Almacenador de contactos</font></p>
             </div>
         </div>
