@@ -75,6 +75,7 @@ function Principal() {
                         <br></br>
                         <li><font size="5">Escriba su idea o apunte para la siguiente reunión</font></li>
                     </ul>
+                    <br></br><br></br>
                 </div>
             </div>
             <br></br><br></br>
