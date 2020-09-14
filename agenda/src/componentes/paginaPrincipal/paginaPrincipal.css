@@ -132,3 +132,44 @@
 
     background: #c7c7c75b;
 }
+
+ul {
+    text-align: left;
+    display:inline-block;   
+    list-style: none;
+    padding: 0px;
+    margin-left: 10px;
+    }
+    
+    ul li::before {
+    content: "\2022";  
+    color: #5DA2BD; 
+    display: inline-block; 
+    padding-right: 10px;
+    font-size: 50px;
+    line-height: 25px;
+    vertical-align: -11px;
+    width: 15px;
+    }
+
+    .rectangulo-segundaParte{
+        width: 50%;
+        max-width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    
+        background: #c7c7c75b;
+    }
+
+    .boton-estilo-final{
+        color: white;
+        font-weight: 600;
+        font-size:20px;
+        width: 250px;
+        height: 60px;
+        background: #5DA2BD;
+        border-radius: 30px;
+        border: 1px solid #FFFDFD;
+        box-sizing: border-box;
+    }

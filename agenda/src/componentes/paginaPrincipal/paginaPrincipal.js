@@ -60,6 +60,28 @@ function Principal() {
                 <img src="contactos.png" alt="Almacenador de contactos"></img>
                 <p><font size="5">Almacenador de contactos</font></p>
             </div>
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+            <div className="rectangulo-segundaParte">
+                <br></br>
+                <h1><center>Beneficios de la agenda virtual</center></h1>
+                <div className="center">
+                    <ul>
+                        <li><font size="5">Nunca se pierda de otra reunión o cumpleaños</font></li>
+                        <br></br>
+                        <li><font size="5">Mantega sus contactos en orden</font></li>
+                        <br></br>
+                        <li><font size="5">Planifique eventos o sesiones informativas</font></li>
+                        <br></br>
+                        <li><font size="5">Escriba su idea o apunte para la siguiente reunión</font></li>
+                    </ul>
+                </div>
+            </div>
+            <br></br><br></br>
+
+            <div className="center">
+                <button type="button" class="boton-estilo-final">Empieza tu nueva agenda virtual</button>
+            </div>
         </div>
     );
 }
