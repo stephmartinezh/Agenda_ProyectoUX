@@ -1,9 +1,10 @@
 import React from 'react'
 import './paginaPrincipal.css'
 
-function Principal() {
-    return( 
-        <div>
+
+const Principal = () => {
+    return (
+        <div className="App">
             <header className="paginaPrincipal">
                 <nav className="paginaPrincipal-barra">
                     <div className="paginaPrincipal-logo">
@@ -39,7 +40,7 @@ function Principal() {
             <h1><center>Funciones de la agenda virtual</center></h1>
             <br></br><br></br><br></br>
 
-                
+
             <div className="imagen-primera">
                 <img src="calendario.png" alt="Calendario organizador"></img>
                 <p><font size="5">Calendario organizador</font></p>
@@ -83,6 +84,7 @@ function Principal() {
             <div className="center">
                 <button type="button" class="boton-estilo-final">Empieza tu nueva agenda virtual</button>
             </div>
+
         </div>
     );
 }

@@ -1,12 +1,11 @@
 import React from 'react';
-import Principal from "./componentes/paginaPrincipal/paginaPrincipal";
+import Routes from './Routes'
+
 
 function App() {
-  return (
-    <div className="App">
-      <Principal />
-    </div>
+  return (  
+    <Routes />
   );
 }
 
-export default App;
+export default  App;
