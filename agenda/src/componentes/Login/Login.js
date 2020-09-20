@@ -26,7 +26,7 @@ const Login = (props) =>{
                     onChange={(e)=> setEmail(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
-                <label>Contrasena</label>
+                <label>Contraseña</label>
                 <input 
                     type="password" 
                     required 
@@ -37,13 +37,13 @@ const Login = (props) =>{
                 <div className="btnContainer">
                     {hasAccount ?(
                     <>
-                    <button onClick={handleLogin}>Sing in </button>
-                    <p>Aun no tienes cuenta ?<span>Registrarse</span></p>
+                    <button onClick={handleLogin}>Sign in </button>
+                    <p>¿Aún no tienes cuenta?<span>Registrarse</span></p>
                     </>
                     ): (
                     <>
-                    <button onClick={handleSignup}>Sing up</button>
-                    <p>Tienes cuenta ?<span>Sign in </span> </p>        
+                    <button onClick={handleSignup}>Log in</button>
+                    <p>¿Tienes cuenta?<span>Sign up </span> </p>        
                     </>
                     )}
                 </div>

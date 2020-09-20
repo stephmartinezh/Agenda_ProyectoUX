@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import './paginaPrincipal.css'
 
 
@@ -13,8 +14,8 @@ const Principal = () => {
                     <div className="espacio"></div>
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
-                            <li><button type="button" className="boton-barra"><a href="/">Login</a></button></li>
-                            <li><button type="button" className="boton-barra"><a href="/">Sign in</a></button></li>
+                            <li><button type="button" className="boton-barra"><Link to={`/login/`}>Login</Link></button></li>
+                            <li><button type="button" className="boton-barra"><Link to={`/signIn/`}>Sign in</Link></button></li>
                         </ul>
                     </div>
                 </nav>
