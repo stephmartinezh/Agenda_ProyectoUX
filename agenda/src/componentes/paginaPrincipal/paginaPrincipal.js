@@ -13,7 +13,7 @@ const Principal = () => {
                     <div className="espacio"></div>
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
-                            <li><button type="button" className="boton-barra"><a href="/">Log in</a></button></li>
+                            <li><button type="button" className="boton-barra"><a href="/">Login</a></button></li>
                             <li><button type="button" className="boton-barra"><a href="/">Sign in</a></button></li>
                         </ul>
                     </div>

@@ -32,7 +32,7 @@
 }
 
 .paginaPrincipal-navigation-items li{
-    padding: 0 1.5rem;
+    padding: 0 0.5rem;
 }
 
 .paginaPrincipal-navigation-items a{
@@ -51,8 +51,8 @@
     border: 2px solid #afafaf;
     box-sizing: border-box;
     background: #5DA2BD;
-    width: 75px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
 }
 
 .imagen{
@@ -69,7 +69,7 @@
     font-size:20px;
     width: 250px;
     height: 50px;
-    background: #B9DDD1;
+    background: #5DA2BD;
     border-radius: 30px;
     border: 1px solid #FFFDFD;
     box-sizing: border-box;
@@ -166,7 +166,7 @@ ul {
         color: white;
         font-weight: 600;
         font-size:20px;
-        width: 250px;
+        width: 350px;
         height: 60px;
         background: #5DA2BD;
         border-radius: 30px;
