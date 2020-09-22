@@ -1,6 +1,5 @@
 import React, {useState, Link} from 'react';
 import 'firebase/auth';
-import {useFirebaseApp} from 'reactfire';
 
 const SignUp = (props) =>{
     const{
@@ -15,22 +14,7 @@ const SignUp = (props) =>{
         emailError,
         passwordError,
     } = useState('');
-    const [email2, setEmail2] = useState('');
-    const [password2, setPassword2] = useState('');
-    const firebase = useFirebaseApp();
-    //const user = useUser();
 
-    const submit = async() =>{
-        await firebase.auth().createUserWithEmailAndPassword(email2,password2);
-    }
-
-    const logout = async ()=>{
-        await firebase.auth().signOut();
-    }
-
-    const login = async ()=>{
-        await firebase.auth().signInWithEmailAndPassword(email2,password2);
-    }
 
     return (
         <section className="login">
@@ -40,16 +24,16 @@ const SignUp = (props) =>{
                     type="text" 
                     autoFocus 
                     required 
-                    value={email2} 
-                    onChange={(ev)=> setEmail2(ev.target.value)}
+                    value={email} 
+                    onChange={(e)=> setEmail(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
                 <label>Contraseña</label>
                 <input 
                     type="password" 
                     required 
-                    value={password2} 
-                    onChange= {(ev) => setPassword2(ev.target.value)}
+                    value={password} 
+                    onChange= {(e) => setPassword(e.target.value)}
                 />
                 <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
@@ -60,7 +44,7 @@ const SignUp = (props) =>{
                     </>
                     ): (
                     <>
-                    <button onClick={submit}>Sign up</button>
+                    <button onClick={handleSignup}>Sign up</button>
                     <p>¿Tienes cuenta?<span>Log in </span> </p>        
                     </>
                     )}
