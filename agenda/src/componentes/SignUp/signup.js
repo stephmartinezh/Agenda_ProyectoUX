@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, Link} from 'react';
 import 'firebase/auth';
-import {useFirebaseApp, useUser} from 'reactfire';
-import fire from '../fireb';
+import {useFirebaseApp} from 'reactfire';
 
-const Login = (props) =>{
+const SignUp = (props) =>{
     const{
         email,
         setEmail,
@@ -36,7 +35,7 @@ const Login = (props) =>{
     return (
         <section className="login">
             <div className="loginContainer">
-                <label>Usuario</label>
+                <label>Correo electrónico</label>
                 <input 
                     type="text" 
                     autoFocus 
@@ -57,12 +56,12 @@ const Login = (props) =>{
                     {hasAccount ?(
                     <>
                     <button onClick={handleLogin}>Sign in </button>
-                    <p>¿Aún no tienes cuenta?<span>Registrarse</span></p>
+                    <p>¿Tienes cuenta?<span>Log in</span></p>
                     </>
                     ): (
                     <>
-                    <button onClick={login}>Log in</button>
-                    <p>¿Tienes cuenta?<span>Sign up </span> </p>        
+                    <button onClick={submit}>Sign up</button>
+                    <p>¿Tienes cuenta?<span>Log in </span> </p>        
                     </>
                     )}
                 </div>
@@ -72,4 +71,4 @@ const Login = (props) =>{
     );
 };
 
-export default Login;
+export default SignUp;
