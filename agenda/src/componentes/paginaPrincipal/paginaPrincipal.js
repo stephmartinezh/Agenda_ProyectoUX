@@ -15,7 +15,7 @@ const Principal = () => {
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
                             <li><button type="button" className="boton-barra"><Link to={`/login/`}>Login</Link></button></li>
-                            <li><button type="button" className="boton-barra"><Link to={`/signIn/`}>Sign in</Link></button></li>
+                            <li><button type="button" className="boton-barra"><Link to={`/signUp/`}>Sign in</Link></button></li>
                         </ul>
                     </div>
                 </nav>

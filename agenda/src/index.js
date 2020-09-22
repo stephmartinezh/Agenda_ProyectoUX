@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-//browser rputer
+//browser router
 
 import {BrowserRouter} from 'react-router-dom';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+import fire from './componentes/fireb';
+import {FirebaseAppProvider} from 'reactfire';
+
+
+ReactDOM.render((
+  <FirebaseAppProvider firebaseConfig ={fire}>
+    <Suspense fallback={'Conectando la página'}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Suspense>
+  </FirebaseAppProvider>
+  ),document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

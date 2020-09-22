@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
+import 'firebase/auth';
+import {useFirebaseApp, useUser} from 'reactfire';
+import fire from '../fireb';
 
 const Login = (props) =>{
     const{
@@ -12,7 +15,23 @@ const Login = (props) =>{
         setHasAccount,
         emailError,
         passwordError,
-    } = props;
+    } = useState('');
+    const [email2, setEmail2] = useState('');
+    const [password2, setPassword2] = useState('');
+    const firebase = useFirebaseApp();
+    //const user = useUser();
+
+    const submit = async() =>{
+        await firebase.auth().createUserWithEmailAndPassword(email2,password2);
+    }
+
+    const logout = async ()=>{
+        await firebase.auth().signOut();
+    }
+
+    const login = async ()=>{
+        await firebase.auth().signInWithEmailAndPassword(email2,password2);
+    }
 
     return (
         <section className="login">
@@ -22,16 +41,16 @@ const Login = (props) =>{
                     type="text" 
                     autoFocus 
                     required 
-                    value={email} 
-                    onChange={(e)=> setEmail(e.target.value)}
+                    value={email2} 
+                    onChange={(ev)=> setEmail2(ev.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
                 <label>Contraseña</label>
                 <input 
                     type="password" 
                     required 
-                    value={password} 
-                    onChange= {(e) => setPassword(e.target.value)}
+                    value={password2} 
+                    onChange= {(ev) => setPassword2(ev.target.value)}
                 />
                 <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
@@ -42,7 +61,7 @@ const Login = (props) =>{
                     </>
                     ): (
                     <>
-                    <button onClick={handleSignup}>Log in</button>
+                    <button onClick={submit}>Log in</button>
                     <p>¿Tienes cuenta?<span>Sign up </span> </p>        
                     </>
                     )}

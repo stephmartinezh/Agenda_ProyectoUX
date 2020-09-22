@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 import LoginContainer from './componentes/Containers/LoginContainer';
 import Principal from './componentes/paginaPrincipal/paginaPrincipal';
 import Inicio from './componentes/PaginaInicio/paginaInicio';
-
 const Routes = () => {
     return(
         <Switch>
