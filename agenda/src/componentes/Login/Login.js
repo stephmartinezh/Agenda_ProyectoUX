@@ -16,7 +16,8 @@ const Login = (props) =>{
         passwordError,
     } = useState('');
 
-
+const[email2, setEmail2] = useState('');
+const[password2, setPassword2] = useState('');
     return (
         <section className="login">
             <div className="loginContainer">
@@ -25,16 +26,16 @@ const Login = (props) =>{
                     type="text" 
                     autoFocus 
                     required 
-                    value={email} 
-                    onChange={(e)=> setEmail(e.target.value)}
+                    value={email2} 
+                    onChange={(e)=> setEmail2(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
                 <label>Contraseña</label>
                 <input 
                     type="password" 
                     required 
-                    value={password} 
-                    onChange= {(e) => setPassword(e.target.value)}
+                    value={password2} 
+                    onChange= {(e) => setPassword2(e.target.value)}
                 />
                 <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
