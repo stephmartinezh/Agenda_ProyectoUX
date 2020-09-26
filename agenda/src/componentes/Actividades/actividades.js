@@ -8,7 +8,7 @@ const Actividades = () => {
                 <div className="actividades-barra">
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio`}>Inicio</Link></button></li>
+                            <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio/`}>Inicio</Link></button></li>
                             <li><button type="button" className="boton-barraInicio"><Link to={`/actividades/`}>Actividades</Link></button></li>
                             <li><button type="button" className="boton-barraInicio"><a href="/">Notas</a></button></li>
                             <li><button type="button" className="boton-barraInicio"><a href="/">Contactos</a></button></li>

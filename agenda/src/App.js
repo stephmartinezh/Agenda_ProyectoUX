@@ -83,23 +83,18 @@ function App() {
 
   return (  
     <div className="App">
-      {user ?(
-        <PaginaInicio
+        <Routes 
+        email={email} 
+        setEmail={setEmail} 
+        password={password} 
+        setPassword={setPassword} 
+        handleLogin={handleLogin}
+        handleSignup={handleSignup}
+        hasAccount={hasAccount}
+        setHasAccount={setHasAccount}
+        emailError={emailError}
+        passwordError={passwordError}
         />
-      ) : (
-        <Login 
-          email={email} 
-          setEmail={setEmail} 
-          password={password} 
-          setPassword={setPassword} 
-          handleLogin={handleLogin}
-          handleSignup={handleSignup}
-          hasAccount={hasAccount}
-          setHasAccount={setHasAccount}
-          emailError={emailError}
-          passwordError={passwordError}
-        />
-      )}
     </div>
   );
 }
