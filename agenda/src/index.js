@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Principal from './componentes/paginaPrincipal/paginaPrincipal';
 import * as serviceWorker from './serviceWorker';
 //browser router
 
@@ -11,7 +12,7 @@ import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
     <BrowserRouter>
-      <App />
+      <Principal />
     </BrowserRouter>
   , document.getElementById('root')
 );

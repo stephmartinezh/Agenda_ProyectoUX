@@ -14,27 +14,27 @@ const Principal = () => {
                     <div className="espacio"></div>
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
-                            <li><button type="button" className="boton-barra"><Link to={`/login/`}>Login</Link></button></li>
+                            <li><button type="button" className="boton-barra"><Link to={`/login`}>Login</Link></button></li>
                             <li><button type="button" className="boton-barra"><Link to={`/signUp/`}>Sign in</Link></button></li>
                         </ul>
                     </div>
                 </nav>
             </header>
-            <img class="imagen" src="img_pantallaPrincipal.png" alt="Imagen de inicio"></img>
+            <img className="imagen" src="img_pantallaPrincipal.png" alt="Imagen de inicio"></img>
             <h1><center>¿Necesitas organizar tus eventos y contactos?</center></h1>
             <br></br>
-            <p><font size="5"><center>Con esta agenda virtual ahora puedes hacerlo</center></font></p>
-            <p><font size="5"><center>en menos tiempo y sin mucho esfuerzo.</center></font></p>
+            <center><p><font size="5">Con esta agenda virtual ahora puedes hacerlo</font></p></center>
+            <center><p><font size="5">en menos tiempo y sin mucho esfuerzo.</font></p></center>
             <br></br>
 
             <div className="center">
-                <button type="button" class="boton-estilo">Crea tu agenda virtual</button>
+                <button type="button" className="boton-estilo">Crea tu agenda virtual</button>
             </div>
 
             <br></br><br></br><br></br>
 
             <div className="rectangulo-primeraParte">
-                <center><img class="imagen-computadora" src="principal_computadora.png" alt="Imagen de la página web"></img></center>
+                <center><img className="imagen-computadora" src="principal_computadora.png" alt="Imagen de la página web"></img></center>
             </div>
             <br></br><br></br><br></br>
 
@@ -83,7 +83,7 @@ const Principal = () => {
             <br></br><br></br>
 
             <div className="center">
-                <button type="button" class="boton-estilo-final">Empieza tu nueva agenda virtual</button>
+                <button type="button" className="boton-estilo-final">Empieza tu nueva agenda virtual</button>
             </div>
 
         </div>
