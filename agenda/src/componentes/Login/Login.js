@@ -1,60 +1,62 @@
-import React, {useState} from 'react';
-import 'firebase/auth';
-import fire from '../fireb';
+import React from 'react';
 
-const Login = (props) =>{
-    const{
-        email,
-        setEmail,
-        password,
-        setPassword,
-        handleLogin,
-        handleSignup,
-        hasAccount,
+const Login = (props) => {
+
+    const {
+        email, 
+        setEmail, 
+        password, 
+        setPassword, 
+        handleLogin, 
+        handleSignup, 
+        hasAccount, 
         setHasAccount,
-        emailError,
-        passwordError,
-    } = useState('');
+        emailError, 
+        passwordError
+    } = props;
 
-const[email2, setEmail2] = useState('');
-const[password2, setPassword2] = useState('');
     return (
         <section className="login">
             <div className="loginContainer">
-                <label>Usuario</label>
+                <label>Username</label>
                 <input 
-                    type="text" 
-                    autoFocus 
-                    required 
-                    value={email2} 
-                    onChange={(e)=> setEmail2(e.target.value)}
+                type="text" 
+                autoFocus 
+                required 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
                 />
                 <p className="errorMsg">{emailError}</p>
-                <label>Contraseña</label>
+                <label>Password</label>
                 <input 
-                    type="password" 
-                    required 
-                    value={password2} 
-                    onChange= {(e) => setPassword2(e.target.value)}
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 />
                 <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
-                    {hasAccount ?(
-                    <>
-                    <button onClick={handleSignup}>Sign in </button>
-                    <p>¿Aún no tienes cuenta?<span>Registrarse</span></p>
-                    </>
-                    ): (
-                    <>
-                    <button onClick={handleLogin}>Log in</button>
-                    <p>¿Tienes cuenta?<span>Sign up </span> </p>        
-                    </>
+                    {hasAccount ? (
+                        <>
+                            <button onClick={handleLogin}>Sign in</button>
+                            <p>
+                                Dont have and account? 
+                                <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
+                            </p>
+                        </>
+                    ) : (
+                        <>
+                            <button onClick={handleSignup}>Sign up</button>
+                            <p>
+                                Have an acoount? 
+                                <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span>
+                                </p>
+                        </>
                     )}
                 </div>
-
             </div>
-        </section>        
-    );
+        </section>
+    )
 };
 
 export default Login;
