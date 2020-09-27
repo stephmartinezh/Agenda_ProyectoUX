@@ -19,7 +19,7 @@ const Inicio = () => {
                 </div>
 
                 <div className="rectangulo-info">
-                    <center><img class="imagen-usuario" src="user.jpg"  alt="Imagen de inicio"></img></center>
+                    <center><img className="imagen-usuario" src="user.jpg"  alt="Imagen de inicio"></img></center>
                     <h3><center className="name-usuario">@USUARIO</center></h3>
                     <h3><center className="name-usuario">UBICACION</center></h3>
                     <h3><center className="name-usuario">HORA</center></h3>
