@@ -28,7 +28,7 @@ const Principal = () => {
             <br></br>
 
             <div className="center">
-                <button type="button" className="boton-estilo">Crea tu agenda virtual</button>
+                <button type="button" className="boton-estilo"><Link to={`/login`} style={{ color: 'inherit',textDecoration: 'none' }}>Crea tu agenda virtual</Link></button>
             </div>
 
             <br></br><br></br><br></br>
@@ -83,7 +83,7 @@ const Principal = () => {
             <br></br><br></br>
 
             <div className="center">
-                <button type="button" className="boton-estilo-final">Empieza tu nueva agenda virtual</button>
+                <button type="button" className="boton-estilo-final"><Link to={`/login`} style={{ color: 'inherit',textDecoration: 'none' }}>Empieza tu nueva agenda virtual</Link></button>
             </div>
 
         </div>

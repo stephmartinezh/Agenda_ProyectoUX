@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './paginaInicio.css'
 import { Link } from "react-router-dom"
 import Calendar from 'react-calendar';
+import fire from '../Fire/Fire';
 
 const Inicio = () => {
     return (
@@ -22,7 +23,7 @@ const Inicio = () => {
                     <h3><center className="name-usuario">@USUARIO</center></h3>
                     <h3><center className="name-usuario">UBICACION</center></h3>
                     <h3><center className="name-usuario">HORA</center></h3>
-                    <center><button type="button" className="boton-cerrarSesion"><Link to={`/`} style={{ color: 'inherit',textDecoration: 'none' }}>CERRAR SESIÓN</Link></button></center>
+                    <center><button type="button" className="boton-cerrarSesion"><Link to={`/`} style={{ color: 'inherit',textDecoration: 'none' }} onClick={() => fire.auth().signOut()}>CERRAR SESIÓN</Link></button></center>
                 </div>
                 <div className="rectangulo-info-derecha">
                     <div className="calendario">

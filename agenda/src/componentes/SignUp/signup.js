@@ -1,32 +1,26 @@
-import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect } from 'react-router';
+import React, { useCallback } from 'react';
+import { withRouter } from 'react-router';
 import fire from '../Fire/Fire';
-import { AuthContext } from '../Auth/Auth';
 
-const Login = ({history}) => {
-    const handleLogin = useCallback(async event => {
+const SignUp = ({history}) => {
+    const handleSignup = useCallback(async event => {
         event.preventDefault();
         const {email, password} = event.target.elements;
         try{
             await fire
                 .auth()
-                .signInWithEmailAndPassword(email.value, password.value);
-                history.push("/");
+                .createUserWithEmailAndPassword(email.value, password.value);
+                history.push("/Inicio");
         } catch(error) {
             alert(error);
         }
     }, [history]);
 
-    const { currentUser } = useContext(AuthContext);
-
-    if(currentUser){
-        return <Redirect to={`/Inicio`} />;
-    }
 
     return (
         <section className="login">
             <div className="loginContainer">
-                <form onSubmit={handleLogin}>
+                <form onSubmit={handleSignup}>
                     <label>Correo</label>
                     <input 
                     name="email" 
@@ -44,11 +38,11 @@ const Login = ({history}) => {
                     placeholder="Contraseña"
                     />
                     <br></br><br></br><br></br><br></br>
-                    <button className="button-estilo" type="submit">Log in</button>
+                    <button className="button-estilo" type="submit">Sign up</button>
                 </form>
             </div>
         </section>
     )
 };
 
-export default withRouter(Login);
+export default withRouter(SignUp);

@@ -4,15 +4,21 @@ import LoginContainer from './componentes/Containers/LoginContainer';
 import Principal from './componentes/paginaPrincipal/paginaPrincipal';
 import Inicio from './componentes/PaginaInicio/paginaInicio';
 import Actividades from './componentes/Actividades/actividades';
+import SignUp from './componentes/SignUp/signup';
+import { AuthProvider } from './componentes/Auth/Auth';
+import PrivateRoute from './PrivateRoute';
 
 const Routes = () => {
     return(
-        <Switch>
-            <Route exact path='/' component = {Principal}/>
-            <Route exact path='/login' component={LoginContainer}/>
-            <Route exact path='/Inicio' component = {Inicio}/>
-            <Route exact path='/actividades' component = {Actividades}/>
-        </Switch>
+        <AuthProvider>
+            <Switch>
+                <Route exact path='/' component = {Principal}/>
+                <Route exact path='/login' component={LoginContainer}/>
+                <Route exact path='/signUp' component={SignUp}/>
+                <PrivateRoute exact path='/Inicio' component = {Inicio}/>
+                <Route exact path='/actividades' component = {Actividades}/>
+            </Switch>
+        </AuthProvider>
     );
 }
 
