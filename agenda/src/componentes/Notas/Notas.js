@@ -1,34 +1,101 @@
-import React from 'react'
-import './Notas.css'
+import React, {Component} from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { Link } from "react-router-dom"
-import fire from '../Fire/Fire';
+import '../paginaPrincipal/paginaPrincipal.css'
 
-const Inicio = () => {
-    return (
-        <div className="paginaInicio">
-                <div className="paginaInicio-barra">
-                    <div className="paginaPrincipal-navigation-items">
-                        <ul>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio/`}>Inicio</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/actividades/`}>Actividades</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/notas/`}>Notas</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/contactos/`}>Contactos</Link></button></li>  
-                        </ul>
-                    </div>
-                </div>
 
-                <div className="rectangulo-info">
-                    <center><img class="imagen-usuario" src="user.jpg"  alt="Imagen de inicio"></img></center>
-                    <h3><center className="name-usuario">@USUARIO</center></h3>
-                    <h3><center className="name-usuario">UBICACION</center></h3>
-                    <h3><center className="name-usuario">HORA</center></h3>
-                    <center><button type="button" className="boton-cerrarSesion"><Link to={`/`} style={{ color: 'inherit',textDecoration: 'none' }} onClick={() => fire.auth().signOut()}>CERRAR SESIÓN</Link></button></center>
-                </div>
-                <div className="rectangulo-info-derecha">
+export default class Notas extends Component{
+onSubmit=(e) => {//reinicio de formulario
+    var ListNotas = [];//inicio nueva lista
+    var storageList = localStorage.getItem('ListNotas') //jalo la lista de la memoria 
+    if(storageList == null){// si la lista esta vacia 
+        ListNotas= []
+    }else{
+        ListNotas = JSON.parse(storageList);//tomo los valores que tiene 
+    }
 
-                </div>
-        </div>
-    );
+    if (this.state.editing) {
+        const newNote = {
+            content: this.state.content,
+            etiqueta: this.state.etiqueta,
+            fecha: this.state.fecha
+        };
+        console.log(newNote)
+        ListNotas.push(newNote);
+        localStorage.setItem('ListNotas',JSON.stringify(ListNotas));
+
+    } else {
+        const newNote = {
+            content: this.state.content,
+            etiqueta: this.state.etiqueta,
+            fecha: this.state.fecha
+        };
+        console.log(newNote)
+        ListNotas.push(newNote);
+        localStorage.setItem('ListNotas',JSON.stringify(ListNotas));
+    }
 }
 
-export default Inicio; 
+state={
+    content : '',
+    etiqueta :'',
+    fecha: new Date()
+}
+
+onInputChange = (e) => {
+    this.setState({
+        [e.target.name]: e.target.value
+    })
+}
+
+onChangeDate = date => {
+    this.setState({date});
+}
+    render(){
+        return (
+            <div className="col-md-6 offset-md-3">  
+                <h4>Agregar un Apunte</h4>
+                <form onSubmit={this.onSubmit}> 
+                    <div className="form-group"> 
+                        <textarea className="container-fluid" 
+                            name="content" 
+                            placeholder="INGRESE LA NOTA"
+                            onChange={this.onInputChange}
+                            value={this.state.content}  
+                            required>        
+                        </textarea>
+                    </div>
+                    <div className="form-group">
+                        <input 
+                            type="text"
+                            onChange={this.onInputChange}
+                            className="form-control" 
+                            placeholder="INGRESE ETIQUETA" 
+                            name="etiqueta"
+                            value={this.state.title} 
+                            required>
+                        </input>
+                    </div>
+                    <div className="form-group">
+                        <DatePicker 
+                        className="form-control"
+                        name="fecha" 
+                        selected={this.state.fecha}
+                        onChange={this.onChangeDate}
+                        />
+                    </div>
+
+                    <button type="submit" className="btn btn-primary"> 
+                    GUARDAR NOTA
+                    </button>
+                    <div>
+                </div> 
+                </form>
+                <br></br>
+                <button type="button" className="btn btn-primary"><Link to={`/listado`}>VOLVER A NOTAS</Link></button>
+            </div>
+            )
+
+    }
+}
