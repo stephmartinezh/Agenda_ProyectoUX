@@ -4,6 +4,9 @@ import { Link } from "react-router-dom"
 import Calendar from 'react-calendar';
 import fire from '../Fire/Fire';
 
+import { Inject ,ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-react-schedule';
+
+
 const Inicio = (props) => {
 
     const {
@@ -21,34 +24,19 @@ const Inicio = (props) => {
                          </ul>
                     </div>
                 </div>
-
                 <div>
-                    <div className="calendario">
-                        <Calendario />
-                    </div>
-                    <div className="rectagulo-final"></div>
+                    <Calendario />
                 </div>
         </div>
     );
 }
 
-class Calendario extends Component {
-    state = {
-        date: new Date(),
-    }
-
-    onChange = date => this.setState({ date })
-
+class Calendario extends React.Component {
+    
     render() {
-      return (
-        <div>
-          <Calendar
-            onChange={this.onChange}
-            value={this.state.date}
-            calendarType={"US"}
-          />
-        </div>
-      );
+        return <ScheduleComponent> 
+            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+        </ScheduleComponent>
     }
 }
 
