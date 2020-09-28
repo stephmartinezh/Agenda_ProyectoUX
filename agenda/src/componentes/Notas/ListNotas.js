@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-import Calendar from 'react-calendar';
 import fire from '../Fire/Fire';
 
 const ListNotas = () => {
@@ -13,6 +12,12 @@ const ListNotas = () => {
                             <li><button type="button" className="boton-barraInicio"><Link to={`/actividades`}>Actividades</Link></button></li>
                             <li><button type="button" className="boton-barraInicio"><Link to={`/listado`}>Notas</Link></button></li>                      
                          </ul>
+                    </div>
+                    <div className="espacio"></div>
+                    <div className="paginaPrincipal-navigation-items">
+                      <ul>
+                        <li><button type="button" className="boton-barraInicio"><Link to={`/`} onClick={() => fire.auth().signOut()}>Cerrar Sesión</Link></button></li>       
+                      </ul>
                     </div>
                 </div>
 

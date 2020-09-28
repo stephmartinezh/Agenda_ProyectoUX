@@ -4,7 +4,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { Link } from "react-router-dom"
 import '../paginaPrincipal/paginaPrincipal.css'
 
-
 export default class Notas extends Component{
 onSubmit=(e) => {//reinicio de formulario
     var ListNotas = [];//inicio nueva lista
@@ -55,7 +54,9 @@ onChangeDate = date => {
     render(){
         return (
             <div className="col-md-6 offset-md-3">  
+            <br></br>
                 <h4>Agregar un Apunte</h4>
+                <br></br>
                 <form onSubmit={this.onSubmit}> 
                     <div className="form-group"> 
                         <textarea className="container-fluid" 
@@ -66,6 +67,7 @@ onChangeDate = date => {
                             required>        
                         </textarea>
                     </div>
+                    <br></br>
                     <div className="form-group">
                         <input 
                             type="text"
@@ -77,6 +79,7 @@ onChangeDate = date => {
                             required>
                         </input>
                     </div>
+                    <br></br>
                     <div className="form-group">
                         <DatePicker 
                         className="form-control"
@@ -86,6 +89,7 @@ onChangeDate = date => {
                         />
                     </div>
 
+                    <br></br><br></br>
                     <button type="submit" className="btn btn-primary"> 
                     GUARDAR NOTA
                     </button>
@@ -93,7 +97,7 @@ onChangeDate = date => {
                 </div> 
                 </form>
                 <br></br>
-                <button type="button" className="btn btn-primary"><Link to={`/listado`}>VOLVER A NOTAS</Link></button>
+                <button type="button" className="btn btn-primary"><Link to={`/listado`} style={{ color: 'inherit',textDecoration: 'none' }}>VOLVER A NOTAS</Link></button>
             </div>
             )
 

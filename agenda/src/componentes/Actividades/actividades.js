@@ -5,6 +5,9 @@ import {TaskRow} from './TaskRow';
 import {TaskBanner} from './TaskBanner';
 import {TaskCreator} from './TaskCreator';
 import {VisibilityControl} from './VisibilityControl';
+import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
+import fire from '../Fire/Fire';
+
 
 const Actividades = () => {
   const [userName, setUserName] = useState('Oswaldo');
@@ -56,10 +59,16 @@ const Actividades = () => {
                 <div className="actividades-barra">
                     <div className="paginaPrincipal-navigation-items">
                         <ul>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio`}>Inicio</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/actividades`}>Actividades</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/listado`}>Notas</Link></button></li>                     
+                          <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio`}>Inicio</Link></button></li>
+                          <li><button type="button" className="boton-barraInicio"><Link to={`/actividades`}>Actividades</Link></button></li>
+                          <li><button type="button" className="boton-barraInicio"><Link to={`/listado`}>Notas</Link></button></li>                     
                         </ul>
+                    </div>
+                    <div className="espacio"></div>
+                    <div className="paginaPrincipal-navigation-items">
+                      <ul>
+                        <li><button type="button" className="boton-barraInicio"><Link to={`/`} onClick={() => fire.auth().signOut()}>Cerrar Sesión</Link></button></li>       
+                      </ul>
                     </div>
                 </div>
                 
@@ -67,14 +76,14 @@ const Actividades = () => {
                     userName={userName}
                     taskItems={taskItems}
                 />
-
+                <h5>Ingrese una actividad:</h5>
                 <TaskCreator 
                     callback={createNewTask}
                 />
 
                 <table className="table table-striped table-bordered">
                     <thead>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                     <th>Terminado</th>
                     </thead>
                     <tbody>
@@ -84,7 +93,7 @@ const Actividades = () => {
 
                 <div className="bg-secondary-text-white text-center p-2">
                     <VisibilityControl
-                    description ="las activiades terminadas"
+                    description ="las actividades terminadas"
                     isChecked = {showCompleted}
                     callback={checked => setShowCompleted(checked)}
                     />
@@ -95,7 +104,7 @@ const Actividades = () => {
                     <table className="table table-striped table-bordered">
                         <thead>
                             <tr>
-                            <th>Descripcion</th>
+                            <th>Descripción</th>
                             <th>Terminado</th>
                             </tr>
                         </thead>

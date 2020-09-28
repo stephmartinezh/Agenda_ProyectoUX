@@ -21,7 +21,13 @@ const Inicio = (props) => {
                             <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio`}>Inicio</Link></button></li>
                             <li><button type="button" className="boton-barraInicio"><Link to={`/actividades`}>Actividades</Link></button></li>
                             <li><button type="button" className="boton-barraInicio"><Link to={`/listado`}>Notas</Link></button></li>          
-                         </ul>
+                            <div className="espacio"></div>
+                            <div className="paginaPrincipal-navigation-items">
+                                <ul>
+                                    <li><button type="button" className="boton-barraInicio"><Link to={`/`} onClick={() => fire.auth().signOut()}>Cerrar Sesión</Link></button></li>       
+                                </ul>
+                            </div>
+                        </ul>
                     </div>
                 </div>
                 <div>
