@@ -11,23 +11,15 @@ const ListNotas = () => {
                         <ul>
                             <li><button type="button" className="boton-barraInicio"><Link to={`/Inicio`}>Inicio</Link></button></li>
                             <li><button type="button" className="boton-barraInicio"><Link to={`/actividades`}>Actividades</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/listado`}>Notas</Link></button></li>
-                            <li><button type="button" className="boton-barraInicio"><Link to={`/contactos`}>Contactos</Link></button></li>                        
+                            <li><button type="button" className="boton-barraInicio"><Link to={`/listado`}>Notas</Link></button></li>                      
                          </ul>
                     </div>
                 </div>
 
-                <div className="rectangulo-info">
-                    <center><img className="imagen-usuario" src="user.jpg"  alt="Imagen de inicio"></img></center>
-                    <h3><center className="name-usuario">@USUARIO</center></h3>
-                    <h3><center className="name-usuario">UBICACION</center></h3>
-                    <h3><center className="name-usuario">HORA</center></h3>
-                    <center><button type="button" className="boton-cerrarSesion"><Link to={`/`} style={{ color: 'inherit',textDecoration: 'none' }} onClick={() => fire.auth().signOut()}>CERRAR SESIÓN</Link></button></center>
-                </div>
-                <div className="rectangulo-info-derecha">
+                <div>
                     <Listar />     
                 </div>
-                <center><button type="button" className="boton-cerrarSesion"><Link to={`/newnotas`} style={{ color: 'inherit',textDecoration: 'none' }} onClick={() => fire.auth().signOut()}>CREAR NUEVA NOTA</Link></button></center>
+                <center><button type="button" className="boton-cerrarSesion"><Link to={`/newnotas`} style={{ color: 'inherit',textDecoration: 'none' }}>CREAR NUEVA NOTA</Link></button></center>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import fire from '../Fire/Fire';
 import { AuthContext } from '../Auth/Auth';
 
 const Login = ({history}) => {
+
     const handleLogin = useCallback(async event => {
         event.preventDefault();
         const {email, password} = event.target.elements;
@@ -20,7 +21,8 @@ const Login = ({history}) => {
     const { currentUser } = useContext(AuthContext);
 
     if(currentUser){
-        return <Redirect to={`/Inicio`} />;
+        return <Redirect to={`/Inicio`}
+                />;
     }
 
     return (
